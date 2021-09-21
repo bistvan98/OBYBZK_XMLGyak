@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<style>
+		table,th,td {
+		  border : 1px solid black;
+		  border-collapse: collapse;
+		}
+		th,td {
+		  padding: 5px;
+		}
+	</style>
+	<head>
+		<meta charset="utf-8">
+		<title>XML OBYBZK</title>
+	</head>
+	<body>
+
+		<button type="button" onclick="loadXMLDoc()">Orarend</button>
+		<br><br>
+		<table id="demo"></table>
+
+		<script>
+			function loadXMLDoc() {
+			  var xmlhttp = new XMLHttpRequest();
+			  xmlhttp.onreadystatechange = function() {
+				if (this.readyState == 4 && this.status == 200) {
+				  myFunction(this);
+				}
+			  };
+			  xmlhttp.open("GET", "BI_orarend.xml", true);
+			  xmlhttp.send();
+			}
+			function myFunction(xml) {
+			  var i;
+			  var xmlDoc = xml.responseXML;
+			  var table="<tr><th>Targy</th><th>Nap</th><th>Tol</th><th>Ig</th><th>Helyszin</th><th>Oktato</th><th>Szak</th></tr>";
+			  var x = xmlDoc.getElementsByTagName("CD");
+			  for (i = 0; i <x.length; i++) { 
+				table += "<tr><td>" +
+				x[i].getElementsByTagName("targy")[0].childNodes[0].nodeValue +
+				"</td><td>" +
+				x[i].getElementsByTagName("nap")[0].childNodes[0].nodeValue +
+				"</td></tr>";
+				x[i].getElementsByTagName("tol")[0].childNodes[0].nodeValue +
+				"</td></tr>";
+				x[i].getElementsByTagName("ig")[0].childNodes[0].nodeValue +
+				"</td></tr>";
+				x[i].getElementsByTagName("helyszin")[0].childNodes[0].nodeValue +
+				"</td></tr>";
+				x[i].getElementsByTagName("oktato")[0].childNodes[0].nodeValue +
+				"</td></tr>";
+				x[i].getElementsByTagName("szak")[0].childNodes[0].nodeValue +
+				"</td></tr>";
+			  }
+			  document.getElementById("demo").innerHTML = table;
+			}
+		</script>
+	</body>
+</html>
