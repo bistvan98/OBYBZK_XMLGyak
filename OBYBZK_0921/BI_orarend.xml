@@ -2,36 +2,36 @@
 
 <orarend>
     <ora id="xml00" tipus="eloadas">
-        <targy nev="adatkezeles_xml_ben"/>
+        <targy>Adatkezelés XML-ben</targy>
         <idopont>
-            <nap id="kedd"/>
-            <tol kezdes="12"/>
-            <ig vege="14"/>
+            <nap>Kedd</nap>
+            <tol>12</tol>
+            <ig>14</ig>
         </idopont>
-        <helyszin eloado="I"/>
-        <oktato nev="Bednarik_Laszlo"/>
-        <szak megnevezes="programtervezo_informatikus"/>
+        <helyszin>I</helyszin>
+        <oktato>Bednarik László</oktato>
+        <szak>Programtervező Informatikus</szak>
     </ora>
     <ora id="xml01" tipus="gyakorlat">
-        <targy nev="adatkezeles_xml_ben"/>
+        <targy>Adatkezelés XML-ben</targy>
         <idopont>
-            <nap id="kedd"/>
-            <tol kezdes="14"/>
-            <ig vege="16"/>
+            <nap>Kedd</nap>
+            <tol>14</tol>
+            <ig>16</ig>
         </idopont>
-        <helyszin eloado="inf_103"/>
-        <oktato nev="Bednarik_Laszlo"/>
-        <szak megnevezes="programtervezo_informatikus"/>
+        <helyszin>Inf. 103</helyszin>
+        <oktato>Bednarik László</oktato>
+        <szak>Programtervező Informatikus</szak>
     </ora>
-    <ora id="szakdolgozat" tipus="eloadas">
-        <targy nev="szakdolgozatkeszites_II"/>
+    <ora id="szakdolg00" tipus="gyakorlat">
+        <targy>Szakdolgozatkészítés II.</targy>
         <idopont>
-            <nap id="szerda"/>
-            <tol kezdes="16"/>
-            <ig vege="17"/>
+            <nap>Szerda</nap>
+            <tol>16</tol>
+            <ig>17</ig>
         </idopont>
-        <helyszin eloado="III"/>
-        <oktato nev="Korei_Attila"/>
-        <szak megnevezes="programtervezo_informatikus"/>
+        <helyszin>III.</helyszin>
+        <oktato>Körei Attila</oktato>
+        <szak>Programtervező Informatikus</szak>
     </ora>
 </orarend>
