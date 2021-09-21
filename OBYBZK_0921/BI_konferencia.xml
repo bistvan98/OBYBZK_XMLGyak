@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<konferencia>
+    <cim id="nagy konferencia"/>
+    <hallgatok>
+        <hallgato>
+            <nev id="sandor"/>
+            <lakcim irsz="3600" varos="ozd" utca="kossuth" szam="12"/>
+        </hallgato>
+    </hallgatok>
+    <helyszin irsz="3515" varos="miskolc" utca="eper" szam="15"/>
+    <eloado>
+        <nev vezetek="nagy" kereszt="bela"/>
+        <adoszam id="11111111-1-11"/>
+        <lakcim irsz="3515" varos="miskolc" utca="fo" szam="21"/>
+    </eloado>
+    <datum id="2021/09/21"/>
+</konferencia>

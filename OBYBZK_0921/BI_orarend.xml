@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<orarend>
+    <ora id="xml00" tipus="eloadas">
+        <targy nev="adatkezeles_xml_ben"/>
+        <idopont>
+            <nap id="kedd"/>
+            <tol kezdes="12"/>
+            <ig vege="14"/>
+        </idopont>
+        <helyszin eloado="I"/>
+        <oktato nev="Bednarik_Laszlo"/>
+        <szak megnevezes="programtervezo_informatikus"/>
+    </ora>
+    <ora id="xml01" tipus="gyakorlat">
+        <targy nev="adatkezeles_xml_ben"/>
+        <idopont>
+            <nap id="kedd"/>
+            <tol kezdes="14"/>
+            <ig vege="16"/>
+        </idopont>
+        <helyszin eloado="inf_103"/>
+        <oktato nev="Bednarik_Laszlo"/>
+        <szak megnevezes="programtervezo_informatikus"/>
+    </ora>
+    <ora id="szakdolgozat" tipus="eloadas">
+        <targy nev="szakdolgozatkeszites_II"/>
+        <idopont>
+            <nap id="szerda"/>
+            <tol kezdes="16"/>
+            <ig vege="17"/>
+        </idopont>
+        <helyszin eloado="III"/>
+        <oktato nev="Korei_Attila"/>
+        <szak megnevezes="programtervezo_informatikus"/>
+    </ora>
+</orarend>
