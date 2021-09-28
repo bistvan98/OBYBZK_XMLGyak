@@ -1,0 +1,9 @@
+<!DOCTYPE konyvek
+[
+<!ELEMENT konyvek (konyv,cim,ev,kiado, szerzo)>
+<!ELEMENT konyv (#PCDATA)>
+<!ELEMENT cim (#PCDATA)>
+<!ELEMENT ev (#PCDATA)>
+<!ELEMENT kiado (#PCDATA)>
+<!ELEMENT szerzo (#PCDATA)>
+]>

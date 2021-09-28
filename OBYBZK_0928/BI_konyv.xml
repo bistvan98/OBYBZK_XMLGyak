@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE konyvek SYSTEM "BI_konyv.dtd">
+<konyvek>
+	<konyv id="1">
+		<cim>XML</cim>
+		<ev>2008</ev>
+		<kiado>Jó Kiadó</kiado>
+		<szerzo id="01">Kovács Béla</szerzo>
+	</konyv>
+	<konyv id="2">
+		<cim>OS</cim>
+		<ev>2020</ev>
+		<kiado>Nagyon Jó Kiadó</kiado>
+		<szerzo id="02">Molnár Károly</szerzo>
+		<szerzo id="03">Szabó Lajos</szerzo>
+	</konyv>
+	<konyv id="3">
+		<cim>OOP</cim>
+		<ev>2013</ev>
+		<kiado>Legjobb Kiadó</kiado>
+		<szerzo id="04">Nagy Ferenc</szerzo>
+	</konyv>
+</konyvek>
