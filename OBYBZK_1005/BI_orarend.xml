@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE konyvek SYSTEM "BI_orarend.xsd">
+<orarend>
+    <ora id="xml00" tipus="eloadas">
+        <targy>Adatkezelés XML-ben</targy>
+        <idopont>
+            <nap>Kedd</nap>
+            <tol>12</tol>
+            <ig>14</ig>
+        </idopont>
+        <helyszin>I</helyszin>
+        <oktato>Bednarik László</oktato>
+        <szak>Programtervező Informatikus</szak>
+    </ora>
+    <ora id="xml01" tipus="gyakorlat">
+        <targy>Adatkezelés XML-ben</targy>
+        <idopont>
+            <nap>Kedd</nap>
+            <tol>14</tol>
+            <ig>16</ig>
+        </idopont>
+        <helyszin>Inf. 103</helyszin>
+        <oktato>Bednarik László</oktato>
+        <szak>Programtervező Informatikus</szak>
+    </ora>
+    <ora id="szakdolg00" tipus="gyakorlat">
+        <targy>Szakdolgozatkészítés II.</targy>
+        <idopont>
+            <nap>Szerda</nap>
+            <tol>16</tol>
+            <ig>17</ig>
+        </idopont>
+        <helyszin>III.</helyszin>
+        <oktato>Körei Attila</oktato>
+        <szak>Programtervező Informatikus</szak>
+    </ora>
+</orarend>
