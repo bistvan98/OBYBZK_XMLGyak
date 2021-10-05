@@ -6,6 +6,7 @@
 		<ev>2008</ev>
 		<kiado>Jó Kiadó</kiado>
 		<szerzo id="01">Kovács Béla</szerzo>
+		<abstract> Asdasdsa</abstract>
 	</konyv>
 	<konyv id="2">
 		<cim>OS</cim>
@@ -13,11 +14,13 @@
 		<kiado>Nagyon Jó Kiadó</kiado>
 		<szerzo id="02">Molnár Károly</szerzo>
 		<szerzo id="03">Szabó Lajos</szerzo>
+		<abstract> Asdafgfdsdsa</abstract>
 	</konyv>
 	<konyv id="3">
 		<cim>OOP</cim>
 		<ev>2013</ev>
 		<kiado>Legjobb Kiadó</kiado>
 		<szerzo id="04">Nagy Ferenc</szerzo>
+		<abstract> As3232dasdsa</abstract>
 	</konyv>
 </konyvek>
