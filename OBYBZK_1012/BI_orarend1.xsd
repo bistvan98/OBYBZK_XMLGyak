@@ -28,4 +28,29 @@
 	</xs:restriction>
 </xs:simpleType>
 
+<xs:complexType name="idopontTipus">
+	<xs:sequence>
+		<xs:element name="nap" type="napTipus" />
+		<xs:element name="tol" type="idopontOraTipus" />
+		<xs:element name="ig" type="idopontOraTipus" />
+	</xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="napTipus">
+	<xs:restriction base="xs:string">
+		<xs:enumeration value="hétfő" />
+		<xs:enumeration value="kedd" />
+		<xs:enumeration value="szerda" />
+		<xs:enumeration value="csütörtök" />
+		<xs:enumeration value="péntek" />
+	</xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="idopontOraTipus">
+	<xs:restriction base="xs:positiveInteger">
+		<xs:minInclusive value="8" />
+		<xs:maxInclusive value="18" />
+	</xs:restriction>
+</xs:simpleType>
+
 </xs:schema>
