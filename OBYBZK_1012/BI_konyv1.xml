@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE konyvek SYSTEM "BI_konyv1.xsd">
+<könyvek>
+	<könyv isbn="k01">
+		<cim>A könyv</cim>
+		<szerző>Nagy Sándor</szerző>
+		<szereplő id="001">
+			<név>Béla</név>
+			<barátja>Ferenc</barátja>
+			<született>1980.02.06.</született>
+			<jellemzés>Magas</jellemzés>
+		</szereplő>
+		<szereplő id="002">
+			<név>Ferenc</név>
+			<született>1970.06.08.</született>
+			<jellemzés>Alacsony</jellemzés>
+		</szereplő>
+	</könyv>
+</könyvek>

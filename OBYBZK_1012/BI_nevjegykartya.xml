@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<nevjegykartyak>
+	<nevjegykartya id="01">
+		<nev>Bajusz István</nev>
+		<ceg>
+			<nev>Cég 01</nev>
+			<cim>
+				<iranyitoszam>3515</iranyitoszam>
+				<varos>Miskolc</varos>
+				<utca>Eper</utca>
+				<hazszam>2</hazszam>
+			</cim>
+			<telefonszam>06703252458</telefonszam>
+			<weblap>www.ceg01.hu</weblap>
+		</ceg>
+		<beosztas>Alkalmazott</beosztas>
+		<telefonszam>06703252169</telefonszam>
+		<email>bajuszistvn@gmail.com</email>
+	</nevjegykartya>
+	
+	<nevjegykartya id="02">
+		<nev>Kovács József</nev>
+		<ceg>
+			<nev>Cég 02</nev>
+			<cim>
+				<iranyitoszam>3515</iranyitoszam>
+				<varos>Miskolc</varos>
+				<utca>Eper</utca>
+				<hazszam>1</hazszam>
+			</cim>
+			<telefonszam>06305896541</telefonszam>
+			<weblap>www.ceg02.hu</weblap>
+		</ceg>
+		<beosztas>Vezető</beosztas>
+		<telefonszam>06301589655</telefonszam>
+		<email>kovacsjozsef@gmail.com</email>
+	</nevjegykartya>
+</nevjegykartyak>
