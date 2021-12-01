@@ -1,22 +1,27 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><etel_rendeles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:XMLSchemaObybzk.xsd">
-    <etelek>
-        <etel Adoszam="123456789101" Etel_ID="01">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<etel_rendeles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="file:XMLSchemaObybzk.xsd">
+
+        <!-- etelek -->
+
+        <etel Adoszam_e="123456789101" Etel_ID="01">
             <etel_neve>hamburger</etel_neve>
             <ar>1590</ar>
             <hozzavalok>buci, huspogacsa, paradicsom, szoszok, salata</hozzavalok>
         </etel>
-        <etel Adoszam="123456789102" Etel_ID="02">
+        <etel Adoszam_e="123456789102" Etel_ID="02">
             <etel_neve>pizza</etel_neve>
             <ar>2390</ar>
-            <hozzavalok>paradicsomos alap, sonka, gomba, kukorica, sajt, csirkemell</hozzavalok>
+            <hozzavalok>paradicsomos alap, sonka, gomba, kukorica, sajt</hozzavalok>
         </etel>
-        <etel Adoszam="123456789103" Etel_ID="03">
+        <etel Adoszam_e="123456789103" Etel_ID="03">
             <etel_neve>gyros</etel_neve>
             <ar>2190</ar>
             <hozzavalok>gyros hus, zoldsegek, hasabburgonya, szosz</hozzavalok>
-        </etel>
-    </etelek>
-    <ettermek>
+        </etel>  
+
+        <!-- etelek vege -->
+        <!-- ettermek -->
+
         <etterem Adoszam="123456789101">
             <etterem_neve>Elso etterem</etterem_neve>
             <telefonszam>06301234123</telefonszam>
@@ -40,10 +45,12 @@
                 <tol>10</tol>
                 <ig>18</ig>
             </nyitvatartas>
-        </etterem>
-    </ettermek>
-    <vasarlok>
-        <vasarlo Adoszam="123456789101" Futar_ID="11" Rendeles_ID="1">
+        </etterem>  
+
+        <!-- ettermek vege -->
+        <!-- vasarlok -->
+
+        <vasarlo Adoszam_v="123456789101" Futar_ID_v="11" Rendeles_ID="1">
             <nev>Nagy Bela</nev>
             <telefonszam>06301234567</telefonszam>
             <lakcim>
@@ -53,7 +60,7 @@
                 <hazszam>12</hazszam>
             </lakcim>
         </vasarlo>
-        <vasarlo Adoszam="123456789102" Futar_ID="12" Rendeles_ID="2">
+        <vasarlo Adoszam_v="123456789102" Futar_ID_v="12" Rendeles_ID="2">
             <nev>Kovacs Andrea</nev>
             <telefonszam>06701234567</telefonszam>
             <lakcim>
@@ -63,7 +70,7 @@
                 <hazszam>3</hazszam>
             </lakcim>
         </vasarlo>
-        <vasarlo Adoszam="123456789103" Futar_ID="13" Rendeles_ID="3">
+        <vasarlo Adoszam_v="123456789103" Futar_ID_v="13" Rendeles_ID="3">
             <nev>Kiss Sandor</nev>
             <telefonszam>06201234567</telefonszam>
             <lakcim>
@@ -72,26 +79,50 @@
                 <utca>Petofi</utca>
                 <hazszam>42</hazszam>
             </lakcim>
-        </vasarlo>
-    </vasarlok>
-    <futarok>
-        <futar Adoszam="123456789101" Futar_ID="11">
+        </vasarlo> 
+    
+        <!-- vasarlok vege -->
+        <!-- futarok -->
+    
+        <futar Adoszam_f="123456789101" Futar_ID="11">
             <nev>Kiss Bela</nev>
             <auto>suzuki</auto>
             <telefonszam>06309876543</telefonszam>
-            <munkaKezdete>2005</munkaKezdete>
+            <muszak>Delelott</muszak>
         </futar>
-        <futar Adoszam="123456789102" Futar_ID="12">
+        <futar Adoszam_f="123456789102" Futar_ID="12">
             <nev>Kovacs Ferenc</nev>
             <auto>toyota</auto>
             <telefonszam>06309876543</telefonszam>
-            <munkaKezdete>2019</munkaKezdete>
+            <muszak>Delelott</muszak>
+            <muszak>Delutan</muszak>
         </futar>
-        <futar Adoszam="123456789103" Futar_ID="13">
+        <futar Adoszam_f="123456789103" Futar_ID="13">
             <nev>Nemeth Sandor</nev>
             <auto>opel</auto>
             <telefonszam>06309876543</telefonszam>
-            <munkaKezdete>2021</munkaKezdete>
+            <muszak>Delutan</muszak>
         </futar>
-    </futarok>
+    
+        <!-- futarok vege -->
+        <!-- etteremVezetok -->
+
+        <etteremVezeto Vezeto_ID="001" Adoszamev="123456789101">
+            <nev>Vezeto Bela</nev>
+            <telefonszam>06704567891</telefonszam>
+            <tulajDatum>2011</tulajDatum>
+        </etteremVezeto>
+        <etteremVezeto Vezeto_ID="002" Adoszamev="123456789102">
+            <nev>Kovacs Andrea</nev>
+            <telefonszam>06304567891</telefonszam>
+            <tulajDatum>2008</tulajDatum>
+        </etteremVezeto>
+        <etteremVezeto Vezeto_ID="003" Adoszamev="123456789103">
+            <nev>Nagy Ferenc</nev>
+            <telefonszam>06204567891</telefonszam>
+            <tulajDatum>2021</tulajDatum>
+        </etteremVezeto>
+    
+        <!-- etteremVezetok vege -->
+    
 </etel_rendeles>

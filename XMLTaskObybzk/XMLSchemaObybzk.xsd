@@ -1,101 +1,154 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
     <xs:element name="etel_rendeles">
+        
+        <!-- Az XML dokumentum felepitese -->
+        
         <xs:complexType>
             <xs:sequence>
-                <xs:element name="etelek">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="etel" maxOccurs="unbounded" minOccurs="0">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element type="xs:string" name="etel_neve"/>
-                                        <xs:element type="xs:short" name="ar"/>
-                                        <xs:element type="xs:string" name="hozzavalok"/>
-                                    </xs:sequence>
-                                    <xs:attribute type="xs:integer" name="Etel_ID" use="required"/>
-                                    <xs:attribute type="xs:integer" name="Adoszam" use="required"/>
-                                </xs:complexType>
-                            </xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-                <xs:element name="ettermek">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="etterem" maxOccurs="unbounded" minOccurs="0">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element type="xs:string" name="etterem_neve"/>
-                                        <xs:element type="xs:string" name="telefonszam"/>
-                                        <xs:element name="nyitvatartas">
-                                            <xs:complexType>
-                                                <xs:sequence>
-                                                  <xs:element type="xs:short" name="tol"/>
-                                                  <xs:element type="xs:short" name="ig"/>
-                                                </xs:sequence>
-                                            </xs:complexType>
-                                        </xs:element>
-                                    </xs:sequence>
-                                    <xs:attribute type="xs:integer" name="Adoszam" use="required"/>
-                                </xs:complexType>
-                            </xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-                <xs:element name="vasarlok">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="vasarlo" maxOccurs="unbounded" minOccurs="0">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element type="xs:string" name="nev"/>
-                                        <xs:element type="xs:string" name="telefonszam"/>
-                                        <xs:element name="lakcim">
-                                            <xs:complexType>
-                                                <xs:sequence>
-                                                  <xs:element type="xs:string" name="iranyitoszam"/>
-                                                  <xs:element type="xs:string" name="varos"/>
-                                                  <xs:element type="xs:string" name="utca"/>
-                                                  <xs:element type="xs:string" name="hazszam"/>
-                                                </xs:sequence>
-                                            </xs:complexType>
-                                        </xs:element>
-                                    </xs:sequence>
-                                    <xs:attribute type="xs:byte" name="Rendeles_ID" use="required"/>
-                                    <xs:attribute type="xs:integer" name="Adoszam" use="required"/>
-                                    <xs:attribute type="xs:byte" name="Futar_ID" use="required"/>
-                                </xs:complexType>
-                            </xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
-                <xs:element name="futarok">
-                    <xs:complexType>
-                        <xs:sequence>
-                            <xs:element name="futar" maxOccurs="unbounded" minOccurs="0">
-                                <xs:complexType>
-                                    <xs:sequence>
-                                        <xs:element type="xs:string" name="nev"/>
-                                        <xs:element type="xs:string" name="auto"/>
-                                        <xs:element type="xs:string" name="telefonszam"/>
-                                        <xs:element name="munkaKezdete">                                          
-                                            <xs:simpleType>                                                                  
-                                                <xs:restriction base="xs:gYear">                                                  
-                                                    <xs:minInclusive value="2000"/>                                                  
-                                                    <xs:maxInclusive value="2021"/>                                                   
-                                                </xs:restriction>                                                             
-                                            </xs:simpleType>                                                            
-                                        </xs:element>
-                                    </xs:sequence>
-                                    <xs:attribute type="xs:byte" name="Futar_ID" use="required"/>
-                                    <xs:attribute type="xs:integer" name="Adoszam" use="required"/>
-                                </xs:complexType>
-                            </xs:element>
-                        </xs:sequence>
-                    </xs:complexType>
-                </xs:element>
+                <xs:element name="etel" type="etelTipus" maxOccurs="unbounded" />
+                <xs:element name="etterem" type="etteremTipus" maxOccurs="unbounded" />
+                <xs:element name="vasarlo" type="vasarloTipus" maxOccurs="unbounded" />
+                <xs:element name="futar" type="futarTipus" maxOccurs="unbounded" />
+                <xs:element name="etteremVezeto" type="etteremVezetoTipus" maxOccurs="unbounded" />
             </xs:sequence>
         </xs:complexType>
+        
+        <!-- Kulcsok -->
+        
+        <xs:key name="etel_kulcs">
+            <xs:selector xpath="etel" />
+            <xs:field xpath="@Etel_ID"></xs:field>
+        </xs:key>
+        <xs:key name="etterem_kulcs">
+            <xs:selector xpath="etterem" />
+            <xs:field xpath="@Adoszam"></xs:field>
+        </xs:key>
+        <xs:key name="vasarlo_kulcs">
+            <xs:selector xpath="vasarlo" />
+            <xs:field xpath="@Rendeles_ID"></xs:field>
+        </xs:key>
+        <xs:key name="futar_kulcs">
+            <xs:selector xpath="futar" />
+            <xs:field xpath="@Futar_ID"></xs:field>
+        </xs:key>
+        <xs:key name="etteremVezeto_kulcs">
+            <xs:selector xpath="etteremVezeto"></xs:selector>
+            <xs:field xpath="@Vezeto_ID"></xs:field>
+        </xs:key>
+        
+        <!-- Idegen kulcsok -->
+        
+        <xs:keyref refer="etterem_kulcs" name="etel_etterem_idegen_kulcs">
+            <xs:selector xpath="etel"></xs:selector>
+            <xs:field xpath="@Adoszam_e"></xs:field>
+        </xs:keyref>
+        <xs:keyref refer="futar_kulcs" name="vasarlo_futar_idegen_kulcs">
+            <xs:selector xpath="vasarlo"></xs:selector>
+            <xs:field xpath="@Futar_ID_v"></xs:field>
+        </xs:keyref>
+        <xs:keyref refer="etterem_kulcs" name="vasarlo_etterem_idegen_kulcs">
+            <xs:selector xpath="vasarlo"></xs:selector>
+            <xs:field xpath="@Adoszam_v"></xs:field>
+        </xs:keyref>
+        <xs:keyref refer="etterem_kulcs" name="futar_etterem_idegen_kulcs">
+            <xs:selector xpath="futar"></xs:selector>
+            <xs:field xpath="@Adoszam_f"></xs:field>
+        </xs:keyref>
+        <xs:keyref refer="etterem_kulcs" name="etteremVezeto_etterem_idegen_kulcs">
+            <xs:selector xpath="etteremVezeto"></xs:selector>
+            <xs:field xpath="@Adoszamev"></xs:field>
+        </xs:keyref>
+        
+        <xs:unique name="unique_etteremVezeto">
+            <xs:selector xpath="etteremVezeto"></xs:selector>
+            <xs:field xpath="@Adoszamev"></xs:field>
+        </xs:unique>
     </xs:element>
+    
+    <!-- Tipusok -->
+    <!-- etel tipus -->
+    
+    <xs:complexType name="etelTipus">
+        <xs:sequence>
+            <xs:element type="xs:string" name="etel_neve"/>
+            <xs:element type="xs:short" name="ar"/>
+            <xs:element type="xs:string" name="hozzavalok"/>
+        </xs:sequence>
+        <xs:attribute type="xs:integer" name="Etel_ID" use="required"/>
+        <xs:attribute type="xs:integer" name="Adoszam_e" use="required"/>
+    </xs:complexType>
+    
+    <!-- etterem tipus -->
+    
+    <xs:complexType name="etteremTipus">
+        <xs:sequence>
+            <xs:element type="xs:string" name="etterem_neve"/>
+            <xs:element type="xs:string" name="telefonszam"/>
+            <xs:element name="nyitvatartas">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element type="xs:short" name="tol"/>
+                        <xs:element type="xs:short" name="ig"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute type="xs:integer" name="Adoszam" use="required"/>
+    </xs:complexType>
+    
+    <!-- vasarlo tipus -->
+    
+    <xs:complexType name="vasarloTipus">
+        <xs:sequence>
+            <xs:element type="xs:string" name="nev"/>
+            <xs:element type="xs:string" name="telefonszam"/>
+            <xs:element name="lakcim">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element type="xs:string" name="iranyitoszam"/>
+                        <xs:element type="xs:string" name="varos"/>
+                        <xs:element type="xs:string" name="utca"/>
+                        <xs:element type="xs:string" name="hazszam"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute type="xs:integer" name="Rendeles_ID" use="required"/>
+        <xs:attribute type="xs:integer" name="Adoszam_v" use="required"/>
+        <xs:attribute type="xs:integer" name="Futar_ID_v" use="required"/>
+    </xs:complexType>
+    
+    <!-- futar tipus -->
+    
+    <xs:complexType name="futarTipus">
+        <xs:sequence>
+            <xs:element type="xs:string" name="nev"/>
+            <xs:element type="xs:string" name="auto"/>
+            <xs:element type="xs:string" name="telefonszam"/>
+            <xs:element type="xs:string" name="muszak" maxOccurs="unbounded"/>
+        </xs:sequence>
+        <xs:attribute type="xs:integer" name="Futar_ID" use="required"/>
+        <xs:attribute type="xs:integer" name="Adoszam_f" use="required"/>
+    </xs:complexType>
+    
+    <!-- etteremVezeto tipus -->
+    
+    <xs:complexType name="etteremVezetoTipus">
+        <xs:sequence>
+            <xs:element type="xs:string" name="nev"/>
+            <xs:element type="xs:string" name="telefonszam"/>
+            <xs:element name="tulajDatum">
+                <xs:simpleType>                                                                  
+                    <xs:restriction base="xs:gYear">                                                  
+                        <xs:minInclusive value="1950"/>                                                  
+                        <xs:maxInclusive value="2021"/>                                                   
+                    </xs:restriction>                                                             
+                </xs:simpleType>      
+            </xs:element>
+        </xs:sequence>
+        <xs:attribute type="xs:integer" name="Vezeto_ID" use="required"/>
+        <xs:attribute type="xs:integer" name="Adoszamev" use="required"/>
+    </xs:complexType>
+    
 </xs:schema>

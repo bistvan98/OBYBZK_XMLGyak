@@ -1,3 +1,1 @@
-DOMParseObybzk.zip
-
 DOMParseObybzk/src/hu/domparse/obybzk
