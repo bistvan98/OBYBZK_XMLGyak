@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE model SYSTEM "BI_ertodtd.DTD">
+
+<model> 
+	<A Aa="a01">
+		<Ab>
+			<Abx>
+			gfddfg
+			</Abx>
+			<Aby>
+			dasdsa
+			</Aby>
+		</Ab>
+		<Ac>
+			<Acd>
+			vbnnbv
+			</Acd>
+			<Ace>
+			uztutz
+			</Ace>
+		</Ac>
+	</A>
+	<B Ba="b01" Bc="b01">
+		<Bb>
+			<Bbx>
+			eqwqe
+			</Bbx>
+			<Bby>
+			swrewr
+			</Bby>
+		</Bb>
+	</B>
+	<C Ca="c01">
+		<Cb>
+		dasdsadas
+		</Cb>
+	</C>
+	<A_B A_B_a="a01" A_B_b="b01">
+		<A_Bc>
+		vbbvc
+		</A_Bc>
+	</A_B>
+</model>

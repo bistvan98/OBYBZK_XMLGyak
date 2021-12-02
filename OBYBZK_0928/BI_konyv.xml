@@ -1,26 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE konyvek SYSTEM "BI_konyv.dtd">
 <konyvek>
-	<konyv id="1">
-		<cim>XML</cim>
-		<ev>2008</ev>
-		<kiado>Jó Kiadó</kiado>
-		<szerzo id="01">Kovács Béla</szerzo>
-		<abstract> Asdasdsa</abstract>
+	<konyv kod="i01">
+		<cim>Konyv1</cim>
+		<kiadasi_ev>10.10.2020.</kiadasi_ev>
+		<kiado>Jozsi es Bela</kiado>
+		<szerzo>Jozsi</szerzo>
+		<szerzo>Bela</szerzo>
+		<absztrakt>Jozsi es Bela konyve</absztrakt>
 	</konyv>
-	<konyv id="2">
-		<cim>OS</cim>
-		<ev>2020</ev>
-		<kiado>Nagyon Jó Kiadó</kiado>
-		<szerzo id="02">Molnár Károly</szerzo>
-		<szerzo id="03">Szabó Lajos</szerzo>
-		<abstract> Asdafgfdsdsa</abstract>
+	<konyv kod="i02">
+		<cim>Konyv2</cim>
+		<kiadasi_ev>12.12.2019.</kiadasi_ev>
+		<kiado>Sanyi</kiado>
+		<szerzo>Sanyi</szerzo>
 	</konyv>
-	<konyv id="3">
-		<cim>OOP</cim>
-		<ev>2013</ev>
-		<kiado>Legjobb Kiadó</kiado>
-		<szerzo id="04">Nagy Ferenc</szerzo>
-		<abstract> As3232dasdsa</abstract>
+	<konyv kod="i03">
+		<cim>Konyv3</cim>
+		<kiadasi_ev>11.11.2021.</kiadasi_ev>
+		<kiado>Asd</kiado>
+		<szerzo>Asdd Asd</szerzo>
 	</konyv>
 </konyvek>

@@ -1,17 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<xs:element name="orarend">
-  <xs:complexType>
-    <xs:sequence>
-      <xs:element name="ora" type="xs:string"/>
-      <xs:element name="targy" type="xs:string"/>
-      <xs:element name="idopont" type="xs:string"/>
-      <xs:element name="nap" type="xs:string"/>
-      <xs:element name="tol" type="xs:string"/>
-      <xs:element name="ig" type="xs:string"/>
-      <xs:element name="helyszin" type="xs:string"/>
-      <xs:element name="oktato" type="xs:string"/>
-      <xs:element name="szak" type="xs:string"/>
-    </xs:sequence>
-  </xs:complexType>
-</xs:element>
+<!ELEMENT orarend (ora+)>
+<!ELEMENT ora (targy,idopont,helyszin,oktato,szak)>
+<!ELEMENT idopont (nap,tol,ig)>
+<!ELEMENT targy (#PCDATA)>
+<!ELEMENT nap (#PCDATA)>
+<!ELEMENT tol (#PCDATA)>
+<!ELEMENT ig (#PCDATA)>
+<!ELEMENT helyszin (#PCDATA)>
+<!ELEMENT oktato (#PCDATA)>
+<!ELEMENT szak (#PCDATA)>
+<!ATTLIST ora kod ID #REQUIRED>
+<!ATTLIST ora tipus CDATA #REQUIRED>
