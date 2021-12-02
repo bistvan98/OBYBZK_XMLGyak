@@ -1,39 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<nevjegykartyak>
-	<nevjegykartya id="01">
-		<nev>Bajusz István</nev>
+<?xml version="1.0" encoding="utf-8"?>
+<nevjegykartyak xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="BI_nevjegykartya.xsd">
+	<nevjegykartya id="1">
+		<nev>Bajusz Istvan</nev>
 		<ceg>
-			<nev>Cég 01</nev>
+			<nev>Miskolci Egyetem</nev>
 			<cim>
 				<iranyitoszam>3515</iranyitoszam>
 				<varos>Miskolc</varos>
-				<utca>Eper</utca>
-				<hazszam>2</hazszam>
+				<utca>Egyetemvaros</utca>
+				<hazszam>654</hazszam>
 			</cim>
-			<telefonszam>06703252458</telefonszam>
-			<weblap>www.ceg01.hu</weblap>
+			<telefonszam>06702589634</telefonszam>
+			<weblap>http://www.uni-miskolc.hu/</weblap>
 		</ceg>
-		<beosztas>Alkalmazott</beosztas>
-		<telefonszam>06703252169</telefonszam>
-		<email>bajuszistvn@gmail.com</email>
+		<beosztas>hallgató</beosztas>
+		<telefonszam>123456789</telefonszam>
+		<email>bajuszistvn@gmail.com</email>	
 	</nevjegykartya>
-	
-	<nevjegykartya id="02">
-		<nev>Kovács József</nev>
+	<nevjegykartya id="2">
+		<nev>Kovacs Bela</nev>
 		<ceg>
-			<nev>Cég 02</nev>
+			<nev>Miskolci Egyetem</nev>
 			<cim>
 				<iranyitoszam>3515</iranyitoszam>
 				<varos>Miskolc</varos>
-				<utca>Eper</utca>
-				<hazszam>1</hazszam>
+				<utca>Egyetemvaros</utca>
+				<hazszam>98</hazszam>
 			</cim>
-			<telefonszam>06305896541</telefonszam>
-			<weblap>www.ceg02.hu</weblap>
+			<telefonszam>06307894561</telefonszam>
+			<weblap>https://www.dsadas.com</weblap>
 		</ceg>
-		<beosztas>Vezető</beosztas>
-		<telefonszam>06301589655</telefonszam>
-		<email>kovacsjozsef@gmail.com</email>
+		<beosztas>Asd</beosztas>
+		<telefonszam>987654321</telefonszam>
+		<email>asd@gmail.com</email>	
 	</nevjegykartya>
 </nevjegykartyak>
